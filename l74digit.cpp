@@ -14,193 +14,193 @@ static void l74_set_value(int16_t value)
  /* switch(value)
   {
     case 0:*/
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],LOW);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],LOW);
-      digitalWrite(l74_segments[4],LOW);
-      digitalWrite(l74_segments[5],LOW);
-      digitalWrite(l74_segments[6],HIGH);
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],HIGH);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],HIGH);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],LOW);
      /* break;
     case 1:
-      digitalWrite(l74_segments[0],HIGH);
-      digitalWrite(l74_segments[1],LOW);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],HIGH);
-      digitalWrite(l74_segments[4],HIGH);
-      digitalWrite(l74_segments[5],HIGH);
-      digitalWrite(l74_segments[6],HIGH);
+      digitalWrite(l74_segments[0],LOW);
+      digitalWrite(l74_segments[1],HIGH);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],LOW);
+      digitalWrite(l74_segments[4],LOW);
+      digitalWrite(l74_segments[5],LOW);
+      digitalWrite(l74_segments[6],LOW);
       break;
     case 2:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],LOW);
-      digitalWrite(l74_segments[2],HIGH);
-      digitalWrite(l74_segments[3],LOW);
-      digitalWrite(l74_segments[4],LOW);
-      digitalWrite(l74_segments[5],HIGH);
-      digitalWrite(l74_segments[6],LOW);
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],HIGH);
+      digitalWrite(l74_segments[2],LOW);
+      digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],HIGH);
+      digitalWrite(l74_segments[5],LOW);
+      digitalWrite(l74_segments[6],HIGH);
       break;
     case 3:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],LOW);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],LOW);
-      digitalWrite(l74_segments[4],HIGH);
-      digitalWrite(l74_segments[5],HIGH);
-      digitalWrite(l74_segments[6],LOW);
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],HIGH);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],LOW);
+      digitalWrite(l74_segments[5],LOW);
+      digitalWrite(l74_segments[6],HIGH);
       break;
     case 4:
-      digitalWrite(l74_segments[0],HIGH);
-      digitalWrite(l74_segments[1],LOW);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],HIGH);
-      digitalWrite(l74_segments[4],HIGH);
-      digitalWrite(l74_segments[5],LOW);
-      digitalWrite(l74_segments[6],LOW);
+      digitalWrite(l74_segments[0],LOW);
+      digitalWrite(l74_segments[1],HIGH);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],LOW);
+      digitalWrite(l74_segments[4],LOW);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],HIGH);
       break;
     case 5:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],HIGH);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],LOW);
-      digitalWrite(l74_segments[4],HIGH);
-      digitalWrite(l74_segments[5],LOW);
-      digitalWrite(l74_segments[6],LOW);
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],LOW);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],LOW);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],HIGH);
       break;
     case 6:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],HIGH);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],LOW);
-      digitalWrite(l74_segments[4],LOW);
-      digitalWrite(l74_segments[5],LOW);
-      digitalWrite(l74_segments[6],LOW);
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],LOW);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],HIGH);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],HIGH);
       break;
     case 7:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],LOW);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],HIGH);
-      digitalWrite(l74_segments[4],HIGH);
-      digitalWrite(l74_segments[5],HIGH);
-      digitalWrite(l74_segments[6],HIGH);
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],HIGH);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],LOW);
+      digitalWrite(l74_segments[4],LOW);
+      digitalWrite(l74_segments[5],LOW);
+      digitalWrite(l74_segments[6],LOW);
       break;
     case 8:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],LOW);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],LOW);
-      digitalWrite(l74_segments[4],LOW);
-      digitalWrite(l74_segments[5],LOW);
-      digitalWrite(l74_segments[6],LOW);
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],HIGH);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],HIGH);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],HIGH);
       break;
     case 9:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],LOW);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],HIGH);
-      digitalWrite(l74_segments[4],HIGH);
-      digitalWrite(l74_segments[5],LOW);
-      digitalWrite(l74_segments[6],LOW);
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],HIGH);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],LOW);
+      digitalWrite(l74_segments[4],LOW);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],HIGH);
       break;
     case 10:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],LOW);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],HIGH);
-      digitalWrite(l74_segments[4],LOW);
-      digitalWrite(l74_segments[5],LOW);
-      digitalWrite(l74_segments[6],LOW);
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],HIGH);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],LOW);
+      digitalWrite(l74_segments[4],HIGH);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],HIGH);
       break;
     case 11:
-      digitalWrite(l74_segments[0],HIGH);
-      digitalWrite(l74_segments[1],HIGH);
-      digitalWrite(l74_segments[2],LOW);
-      digitalWrite(l74_segments[3],LOW);
-      digitalWrite(l74_segments[4],LOW);
-      digitalWrite(l74_segments[5],LOW);
-      digitalWrite(l74_segments[6],LOW);
+      digitalWrite(l74_segments[0],LOW);
+      digitalWrite(l74_segments[1],LOW);
+      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],HIGH);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],HIGH);
       break;
     case 12:
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],LOW);
+      digitalWrite(l74_segments[2],LOW);
+      digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],HIGH);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],LOW);
+      break;
+    case 13:
       digitalWrite(l74_segments[0],LOW);
       digitalWrite(l74_segments[1],HIGH);
       digitalWrite(l74_segments[2],HIGH);
-      digitalWrite(l74_segments[3],LOW);
-      digitalWrite(l74_segments[4],LOW);
+      digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],HIGH);
       digitalWrite(l74_segments[5],LOW);
       digitalWrite(l74_segments[6],HIGH);
       break;
-    case 13:
+    case 14:
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],LOW);
+      digitalWrite(l74_segments[2],LOW);
+      digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],HIGH);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],HIGH);
+      break;
+    case 15:
+      digitalWrite(l74_segments[0],HIGH);
+      digitalWrite(l74_segments[1],LOW);
+      digitalWrite(l74_segments[2],LOW);
+      digitalWrite(l74_segments[3],LOW);
+      digitalWrite(l74_segments[4],HIGH);
+      digitalWrite(l74_segments[5],HIGH);
+      digitalWrite(l74_segments[6],HIGH);
+      break;
+    case TOP:
       digitalWrite(l74_segments[0],HIGH);
       digitalWrite(l74_segments[1],LOW);
       digitalWrite(l74_segments[2],LOW);
       digitalWrite(l74_segments[3],LOW);
       digitalWrite(l74_segments[4],LOW);
-      digitalWrite(l74_segments[5],HIGH);
-      digitalWrite(l74_segments[6],LOW);
-      break;
-    case 14:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],HIGH);
-      digitalWrite(l74_segments[2],HIGH);
-      digitalWrite(l74_segments[3],LOW);
-      digitalWrite(l74_segments[4],LOW);
       digitalWrite(l74_segments[5],LOW);
       digitalWrite(l74_segments[6],LOW);
-      break;
-    case 15:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],HIGH);
-      digitalWrite(l74_segments[2],HIGH);
-      digitalWrite(l74_segments[3],HIGH);
-      digitalWrite(l74_segments[4],LOW);
-      digitalWrite(l74_segments[5],LOW);
-      digitalWrite(l74_segments[6],LOW);
-      break;
-    case TOP:
-      digitalWrite(l74_segments[0],LOW);
-      digitalWrite(l74_segments[1],HIGH);
-      digitalWrite(l74_segments[2],HIGH);
-      digitalWrite(l74_segments[3],HIGH);
-      digitalWrite(l74_segments[4],HIGH);
-      digitalWrite(l74_segments[5],HIGH);
-      digitalWrite(l74_segments[6],HIGH);
       break;
     case MIDDLE:
-      digitalWrite(l74_segments[0],HIGH);
-      digitalWrite(l74_segments[1],HIGH);
-      digitalWrite(l74_segments[2],HIGH);
-      digitalWrite(l74_segments[3],HIGH);
-      digitalWrite(l74_segments[4],HIGH);
-      digitalWrite(l74_segments[5],HIGH);
-      digitalWrite(l74_segments[6],LOW);
-      break;
-    case BOTTOM:
-      digitalWrite(l74_segments[0],HIGH);
-      digitalWrite(l74_segments[1],HIGH);
-      digitalWrite(l74_segments[2],HIGH);
+      digitalWrite(l74_segments[0],LOW);
+      digitalWrite(l74_segments[1],LOW);
+      digitalWrite(l74_segments[2],LOW);
       digitalWrite(l74_segments[3],LOW);
-      digitalWrite(l74_segments[4],HIGH);
-      digitalWrite(l74_segments[5],HIGH);
-      digitalWrite(l74_segments[6],HIGH);
-      break;
-    case LEFT:
-      digitalWrite(l74_segments[0],HIGH);
-      digitalWrite(l74_segments[1],HIGH);
-      digitalWrite(l74_segments[2],HIGH);
-      digitalWrite(l74_segments[3],HIGH);
       digitalWrite(l74_segments[4],LOW);
       digitalWrite(l74_segments[5],LOW);
       digitalWrite(l74_segments[6],HIGH);
       break;
-    case OFF:
-      digitalWrite(l74_segments[0],HIGH);
-      digitalWrite(l74_segments[1],HIGH);
-      digitalWrite(l74_segments[2],HIGH);
+    case BOTTOM:
+      digitalWrite(l74_segments[0],LOW);
+      digitalWrite(l74_segments[1],LOW);
+      digitalWrite(l74_segments[2],LOW);
       digitalWrite(l74_segments[3],HIGH);
+      digitalWrite(l74_segments[4],LOW);
+      digitalWrite(l74_segments[5],LOW);
+      digitalWrite(l74_segments[6],LOW);
+      break;
+    case LEFT:
+      digitalWrite(l74_segments[0],LOW);
+      digitalWrite(l74_segments[1],LOW);
+      digitalWrite(l74_segments[2],LOW);
+      digitalWrite(l74_segments[3],LOW);
       digitalWrite(l74_segments[4],HIGH);
       digitalWrite(l74_segments[5],HIGH);
-      digitalWrite(l74_segments[6],HIGH);
+      digitalWrite(l74_segments[6],LOW);
+      break;
+    case OFF:
+      digitalWrite(l74_segments[0],LOW);
+      digitalWrite(l74_segments[1],LOW);
+      digitalWrite(l74_segments[2],LOW);
+      digitalWrite(l74_segments[3],LOW);
+      digitalWrite(l74_segments[4],LOW);
+      digitalWrite(l74_segments[5],LOW);
+      digitalWrite(l74_segments[6],LOW);
       break;
   }*/
 }
