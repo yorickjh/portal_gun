@@ -3,7 +3,7 @@
 int16_t l74_values[4]={OFF,OFF,OFF,OFF};
 bool l74_blinks[4]={false,false,false,false};
 
-static uint8_t l74_digits[4]={A0, A1, A2, A3}; //A3,A2,A1,A0};
+static uint8_t l74_digits[4]={A3,A2,A1,A0};
 static uint8_t l74_segments[7]={5,6,8,7,9,10,11}; // NOTE(yorick): Pin swap between 7 and 8 because lazy on wiring.
 bool l74_blink_show=true;
 static uint32_t l74_blink_timer=0;
@@ -210,13 +210,13 @@ void l74_initialize()
   for(uint16_t ii=0;ii<4;++ii)
   {
     pinMode(l74_digits[ii],OUTPUT);
-    digitalWrite(l74_digits[ii],LOW);
+    digitalWrite(l74_digits[ii],HIGH);
   }
 
   for(uint16_t ii=0;ii<7;++ii)
   {
     pinMode(l74_segments[ii],OUTPUT);
-    digitalWrite(l74_segments[ii],LOW);
+    digitalWrite(l74_segments[ii],HIGH);
   }
 }
 
@@ -256,7 +256,7 @@ void l74_number_rollover_independent()
 void l74_update()
 {
   for(uint16_t ii=0;ii<4;++ii)
-    digitalWrite(l74_digits[ii],LOW);
+    digitalWrite(l74_digits[ii],HIGH);
 
   for(uint16_t ii=0;ii<4;++ii)
   {
@@ -271,9 +271,9 @@ void l74_update()
     else
       l74_set_value(OFF);
 
-    digitalWrite(l74_digits[ii],HIGH);
-    delay(5);
     digitalWrite(l74_digits[ii],LOW);
+    delay(1);
+    digitalWrite(l74_digits[ii],HIGH);
   }
 }
 

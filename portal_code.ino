@@ -333,7 +333,7 @@ void update_edit_mode()
   button_update();
   
   encoder.tick();
-  int16_t new_encoder_pos=encoder.getPosition();
+  int16_t new_encoder_pos=0; //encoder.getPosition();
 
   if(encoder_pos!=new_encoder_pos)
   {
