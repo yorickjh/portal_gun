@@ -63,7 +63,7 @@ void power_off()
 
 void button_setup()
 {
-  pinMode(button_pin,INPUT);
+  pinMode(button_pin,INPUT_PULLUP);
 }
 
 void speaker_setup()
@@ -83,7 +83,7 @@ void lcd_setup()
 
 void button_update()
 {
-  bool value=digitalRead(button_pin);
+  bool value= !digitalRead(button_pin);
   
   if(value&&!button_down)
     button_down_start_time=millis();
