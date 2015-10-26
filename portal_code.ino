@@ -438,7 +438,9 @@ void setup()
 
 void loop()
 {
-  l74_values[0] = 5;
+  l74_values[0] = 0;
+  l74_values[1] = 1;
+  l74_values[2] = 2;
   while(true)
   {
     l74_update();

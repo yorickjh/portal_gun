@@ -4,16 +4,16 @@ int16_t l74_values[4]={OFF,OFF,OFF,OFF};
 bool l74_blinks[4]={false,false,false,false};
 
 static uint8_t l74_digits[4]={A0, A1, A2, A3}; //A3,A2,A1,A0};
-static uint8_t l74_segments[7]={5,6,7,8,9,10,11};
+static uint8_t l74_segments[7]={5,6,8,7,9,10,11}; // NOTE(yorick): Pin swap between 7 and 8 because lazy on wiring.
 bool l74_blink_show=true;
 static uint32_t l74_blink_timer=0;
 static uint16_t l74_blink_duration=333;
 
 static void l74_set_value(int16_t value)
 {
- /* switch(value)
+  switch(value)
   {
-    case 0:*/
+    case 0:
       digitalWrite(l74_segments[0],HIGH);
       digitalWrite(l74_segments[1],HIGH);
       digitalWrite(l74_segments[2],HIGH);
@@ -21,7 +21,7 @@ static void l74_set_value(int16_t value)
       digitalWrite(l74_segments[4],HIGH);
       digitalWrite(l74_segments[5],HIGH);
       digitalWrite(l74_segments[6],LOW);
-     /* break;
+      break;
     case 1:
       digitalWrite(l74_segments[0],LOW);
       digitalWrite(l74_segments[1],HIGH);
@@ -30,7 +30,7 @@ static void l74_set_value(int16_t value)
       digitalWrite(l74_segments[4],LOW);
       digitalWrite(l74_segments[5],LOW);
       digitalWrite(l74_segments[6],LOW);
-      break;
+    break;
     case 2:
       digitalWrite(l74_segments[0],HIGH);
       digitalWrite(l74_segments[1],HIGH);
@@ -202,7 +202,7 @@ static void l74_set_value(int16_t value)
       digitalWrite(l74_segments[5],LOW);
       digitalWrite(l74_segments[6],LOW);
       break;
-  }*/
+  }
 }
 
 void l74_initialize()
