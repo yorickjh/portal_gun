@@ -438,13 +438,9 @@ void setup()
 
 void loop()
 {
-  l74_values[0] = 0;
-  l74_values[1] = 1;
-  l74_values[2] = 2;
   while(true)
   {
-    l74_update();
-   /* if(mode==EDIT)
+    if(mode==EDIT)
       update_edit_mode();
     else if(mode==DIGIT)
       update_digit_mode();
@@ -452,7 +448,7 @@ void loop()
       update_shoot_mode();
 
     if(millis()>kill_timer)
-      power_off();*/
+      power_off();
   }
 
   power_off();
