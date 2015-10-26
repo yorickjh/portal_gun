@@ -4,7 +4,7 @@ int16_t l74_values[4]={OFF,OFF,OFF,OFF};
 bool l74_blinks[4]={false,false,false,false};
 
 static uint8_t l74_digits[4]={A0, A1, A2, A3}; //A3,A2,A1,A0};
-static uint8_t l74_segments[7]={11, 10, 9, 8, 7, 6, 5}; //5,6,7,8,9,10,11};
+static uint8_t l74_segments[7]={5,6,7,8,9,10,11};
 bool l74_blink_show=true;
 static uint32_t l74_blink_timer=0;
 static uint16_t l74_blink_duration=333;
