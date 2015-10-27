@@ -26,6 +26,7 @@ int16_t cursor_pos=3;
 uint16_t speaker_pin=3;
 
 uint16_t alive_pin=12;
+uint16_t sleep_wait_time_ms=200;
 uint16_t kill_timeout=30000;
 uint32_t kill_timer=millis()+kill_timeout;
 
@@ -51,14 +52,42 @@ void power_off()
 {
   pinMode(alive_pin,OUTPUT);
   digitalWrite(alive_pin,LOW);
+}
+
+/* Turns off all LEDs and the 7-segment. Waits until the button is depressed and held across
+ * a boundary timer, then wakes up the 7-segment with the default value showing, and shows
+ * the LEDs.
+ */
+void sleep_until_button_push()
+{
+  power_off();
 
   crystal_off();
   deflector_off();
 
   enter_none_mode();
 
+  // Wait for rotary encoder to wake up.
   while(true)
-  {}
+  {
+    delay(sleep_wait_time_ms);
+
+    if (!digitalRead(button_pin)) {
+      break;
+    }
+  }
+
+  // Turn back on before returning to wherever called sleep.
+  power_on();
+  crystal_on();
+  deflector_on();
+  enter_edit_mode();
+
+  l74_values[0]=12;
+  l74_values[1]=1;
+  l74_values[2]=3;
+  l74_values[3]=2;
+  l74_update();
 }
 
 void button_setup()
@@ -350,7 +379,7 @@ void update_edit_mode()
   encoder_pos=new_encoder_pos;
   
   if(button_down_time>button_off_time)
-    power_off();
+    sleep_until_button_push();
 
   if(button_down&&button_down_time>button_activate_time)
     enter_shoot_mode();
@@ -441,16 +470,20 @@ void loop()
   while(true)
   {
     if(mode==EDIT)
+    {
       update_edit_mode();
-    else if(mode==DIGIT)
+    } else if(mode==DIGIT)
+    {
       update_digit_mode();
-    else if(mode==SHOOT)
+    } else if(mode==SHOOT)
+    {
       update_shoot_mode();
+    }
 
     if(millis()>kill_timer)
-      power_off();
+    {
+      sleep_until_button_push();
+    }
   }
-
-  power_off();
 }
 
